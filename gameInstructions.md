@@ -6,7 +6,7 @@
 
 To create a game of Rock Paper Scissors against a computer
 
-### Algorithm 
+### Algorithm -  Pseudocode
 
 0. Instructions 
 1. Computer randomly generates either Rock, Paper or Scissors and keeps answer secret
