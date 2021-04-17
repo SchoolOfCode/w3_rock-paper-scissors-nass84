@@ -45,6 +45,8 @@ To create a game of Rock Paper Scissors against a computer
 #### Journal 
 
 - Day 1 Wrote Algorithm, tested it on Jon and made the game in Scratch to check it worked. 
+- Day 2 to Day 6 - Completed Homework up to Check Point
+- Day 7 Completed Task 1 - Game outcomes into If Statements to check logic
 
 #### Decisions
 

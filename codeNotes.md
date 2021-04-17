@@ -1,5 +1,39 @@
 ### Potential Code I may use -11/04/2021
 
+Example of if else statement that works 
+
+if(100 > 50) {
+ console.log(`if statements are confusing`) 
+} else if {
+console.log(`if statements are not confusing`)
+} 
+
+Example of while loop that works - Repeat until true
+
+while(count < 5) {
+    console.log(count);
+    count = count + 1;
+    break;
+}
+console.log("Wooohooo!")
+
+Example of for loop that works - Repeat number of times and then display text 
+
+for(let count = 0; count < 10; count++){
+	console.log(count);
+}
+
+
+
+<!--count += 1;  (adds 1 short cut)  
+    count ++; increment operator 
+    Count = count + 1; -->
+
+
+- []Check else statments from yesterday
+
+### Potential Code I may use -11/04/2021
+
 Scratch game made, First half of 2 hour video watched, M1mo up to Conditionals
 Wrote down what i think may be potentially right instructions so I can correct them as I learn more.  
 
