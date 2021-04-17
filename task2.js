@@ -31,3 +31,19 @@ function getWinner (playerMove, computerMove) {
     console.log(result);
 
 }
+
+
+// First Attempt - 
+
+// Can use an if statement, unsure how to use the || properly)
+
+// function getWinner(player1, player2){
+//     console.log("Player picked " + player1 + "! " + "Computer picked "  + player2 + "!");
+//     if (player1 === "paper" && player2 === "rock") { 
+//         return "1";
+//     }
+// }
+
+
+
+
