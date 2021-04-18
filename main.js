@@ -7,7 +7,7 @@
 // - [x] How many games have been played 
         // - Create a variable for games played x
         // - If score increases by 1 add 1 to games played
-// - [] How many player wins 
+// - [x] How many player wins 
         // - Create a variable for player wins
         // - If score increases by 1 add 1 to player wins
 // - [] How many player losses
@@ -23,6 +23,8 @@
 let result = 0;
 let answer = true;
 let gamesPlayed = 0;
+let playerWins = 0;
+let playerLosses = 0;
 
 function getWinner() {
  while (answer === true) {
@@ -31,17 +33,17 @@ function getWinner() {
   let computerMove = computerPicks();
   let playerMove = prompt("Do you pick rock, paper or scissors?");
   if (playerMove === "paper" && computerMove === "rock") {
-   result++;
+    playerWins++;
   } else if (playerMove === "rock" && computerMove === "scissors") {
-   result++;
+    playerWins++;
   } else if (playerMove === "scissors" && computerMove === "paper") {
-   result++;
+    playerWins++;
   } else if (playerMove === "paper" && computerMove === "scissors") {
-   result--;
+    playerLosses++;
   } else if (playerMove === "rock" && computerMove === "paper") {
-   result--;
+    playerLosses++;
   } else if (playerMove === "scissors" && computerMove === "rock") {
-   result--;
+    playerLosses++;
   }
   alert(
    "You picked " +
@@ -54,7 +56,7 @@ function getWinner() {
 
   answer = confirm("Do you want to play again?");
   if (answer === false) {
-   alert("Thank you for playing " + gamesPlayed + " games!");
+   alert("Thank you for playing, You won " + playerWins + " and lost " + playerLosses +  " out of " + gamesPlayed + " games!");
   }
  }
 }
