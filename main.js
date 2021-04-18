@@ -10,14 +10,16 @@
 // - [x] How many player wins 
         // - Create a variable for player wins
         // - If score increases by 1 add 1 to player wins
-// - [] How many player losses
+// - [x] How many player losses
         // - Create a variable for player losses
         // - If score increases by 1 add 1 to player lossess
-// - [] How many draws
+// - [x] How many draws
         // - Create a variable for draw
         // - Add code to alert draw
         // - If draw increases by 1 add 1 to draw
 // - [] Display Information after each game
+// - [] Stop player entering wrong information 
+
 
 
 let result = 0;
@@ -25,6 +27,7 @@ let answer = true;
 let gamesPlayed = 0;
 let playerWins = 0;
 let playerLosses = 0;
+let draw = 0;
 
 function getWinner() {
  while (answer === true) {
@@ -32,19 +35,32 @@ function getWinner() {
     console.log(gamesPlayed);
   let computerMove = computerPicks();
   let playerMove = prompt("Do you pick rock, paper or scissors?");
-  if (playerMove === "paper" && computerMove === "rock") {
-    playerWins++;
-  } else if (playerMove === "rock" && computerMove === "scissors") {
-    playerWins++;
-  } else if (playerMove === "scissors" && computerMove === "paper") {
-    playerWins++;
-  } else if (playerMove === "paper" && computerMove === "scissors") {
-    playerLosses++;
-  } else if (playerMove === "rock" && computerMove === "paper") {
-    playerLosses++;
-  } else if (playerMove === "scissors" && computerMove === "rock") {
-    playerLosses++;
-  }
+    if (playerMove === "paper" && computerMove === "rock") {
+        playerWins++;
+        result++;
+    } else if (playerMove === "rock" && computerMove === "scissors") {
+        playerWins++;
+        result++;
+    } else if (playerMove === "scissors" && computerMove === "paper") {
+        playerWins++;
+        result++;
+    } else if (playerMove === "paper" && computerMove === "scissors") {
+        playerLosses++;
+        result--;
+    } else if (playerMove === "rock" && computerMove === "paper") {
+        playerLosses++;
+        result--;
+    } else if (playerMove === "scissors" && computerMove === "rock") {
+        playerLosses++;
+        result--;
+    } else if (playerMove === "scissors" && computerMove === "scissors") {
+        draw++;
+    } else if (playerMove === "rock" && computerMove === "rock") {
+        draw++;
+    } else if (playerMove === "paper" && computerMove === "paper") {
+        draw++;
+    }
+
   alert(
    "You picked " +
     playerMove +
@@ -56,8 +72,9 @@ function getWinner() {
 
   answer = confirm("Do you want to play again?");
   if (answer === false) {
-   alert("Thank you for playing, You won " + playerWins + " and lost " + playerLosses +  " out of " + gamesPlayed + " games!");
+   alert("Thank you for playing. You won " + playerWins + " games, " + "drew " + draw + " games, and lost " + playerLosses +  " games, out of " + gamesPlayed + " games played!");
   }
+
  }
 }
 
@@ -71,4 +88,4 @@ function computerPicks() {
  let computerMove = computerChoice;
 
  return computerMove;
-}
+} 
