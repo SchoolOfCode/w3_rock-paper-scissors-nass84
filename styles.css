@@ -1,0 +1,77 @@
+
+/* https://www.itakeyou.co.uk/emerald-green-and-salmon-colour-scheme/ */
+
+
+article {
+    padding: 30px;
+   }
+
+h2 {
+   font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 26px;
+    text-align: center;
+}
+
+.scoreboard {
+    display:flex;
+    justify-content: center;
+    margin: 20px;
+    }
+
+.score {
+    border: solid black 2px;
+    padding: 0, 30px, 0, 30px;
+}
+
+.center {
+    display:flex;
+    justify-content: center;
+    flex: 0, 1, auto;
+    margin: 20px 40px 20px 40px;
+    
+    }
+
+.rules {
+    display:flex;
+    justify-content: center;
+    margin: 20px;
+    
+    
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+
+
+}
+
+.button {
+    background-color:  #2196F3; 
+    border: none;
+    border-radius: 20px 40px 20px 40px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 20px 40px 20px 40px;
+
+  }

@@ -29,178 +29,56 @@ let gamesPlayed = 0;
 let playerWins = 0;
 let playerLosses = 0;
 let draw = 0;
+let playerMove; 
+let computerMove
 
 function getWinner() {
  while (answer === true) {
   gamesPlayed++;
   console.log(gamesPlayed);
-  let computerMove = computerPicks();
-  let playerMove = prompt("Do you pick rock, paper or scissors?");
+  computerMove = computerPicks();
+  playerMove = prompt("Do you pick rock, paper or scissors?");
   if (playerMove === "paper" && computerMove === "rock") {
    playerWins++;
    result++;
-   alert(
-    "You picked " +
-     playerMove +
-     "! The computer picked " +
-     computerMove +
-     "! \nYou have won this round!\n" +
-     "\nTotal Score: \n**You Win: " +
-     playerWins +
-     "\n**Draw: " +
-     draw +
-     "\n**You Lost: " +
-     playerLosses +
-     "\nTotal Games: " +
-     gamesPlayed
-   );
+   alertScore("won");
   } else if (playerMove === "rock" && computerMove === "scissors") {
    playerWins++;
    result++;
-   alert(
-    "You picked " +
-     playerMove +
-     "! The computer picked " +
-     computerMove +
-     "! \nYou have won this round!\n" +
-     "\nTotal Score: \n**You Win: " +
-     playerWins +
-     "\n**Draw: " +
-     draw +
-     "\n**You Lost: " +
-     playerLosses +
-     "\nTotal Games: " +
-     gamesPlayed
-   );
+   alertScore("won");
   } else if (playerMove === "scissors" && computerMove === "paper") {
    playerWins++;
    result++;
-   alert(
-    "You picked " +
-     playerMove +
-     "! The computer picked " +
-     computerMove +
-     "! \nYou have won this round!\n" +
-     "\nTotal Score: \n**You Win: " +
-     playerWins +
-     "\n**Draw: " +
-     draw +
-     "\n**You Lost: " +
-     playerLosses +
-     "\nTotal Games: " +
-     gamesPlayed
-   );
+   alertScore("won");
   } else if (playerMove === "paper" && computerMove === "scissors") {
    playerLosses++;
    result--;
-   alert(
-    "You picked " +
-     playerMove +
-     "! The computer picked " +
-     computerMove +
-     "! \nYou have lost this round!\n" +
-     "\nTotal Score: \n**You Win: " +
-     playerWins +
-     "\n**Draw: " +
-     draw +
-     "\n**You Lost: " +
-     playerLosses +
-     "\nTotal Games: " +
-     gamesPlayed
-   );
+   alertScore("lost");
   } else if (playerMove === "rock" && computerMove === "paper") {
    playerLosses++;
    result--;
-   alert(
-    "You picked " +
-     playerMove +
-     "! The computer picked " +
-     computerMove +
-     "! \nYou have lost this round!\n" +
-     "\nTotal Score: \n**You Win: " +
-     playerWins +
-     "\n**Draw: " +
-     draw +
-     "\n**You Lost: " +
-     playerLosses +
-     "\nTotal Games: " +
-     gamesPlayed
-   );
+   alertScore("lost");
   } else if (playerMove === "scissors" && computerMove === "rock") {
    playerLosses++;
    result--;
-   alert(
-    "You picked " +
-     playerMove +
-     "! The computer picked " +
-     computerMove +
-     "! \nYou have lost this round!\n" +
-     "\nTotal Score: \n**You Win: " +
-     playerWins +
-     "\n**Draw: " +
-     draw +
-     "\n**You Lost: " +
-     playerLosses +
-     "\nTotal Games: " +
-     gamesPlayed
-   );
+   alertScore("lost");
   } else if (playerMove === "scissors" && computerMove === "scissors") {
    draw++;
-   alert(
-    "You picked " +
-     playerMove +
-     "! The computer picked " +
-     computerMove +
-     "! \nIt's a draw!\n" +
-     "\nTotal Score: \n**You Win: " +
-     playerWins +
-     "\n**Draw: " +
-     draw +
-     "\n**You Lost: " +
-     playerLosses +
-     "\nTotal Games: " +
-     gamesPlayed
-   );
+   alertScore("drawn");
   } else if (playerMove === "rock" && computerMove === "rock") {
    draw++;
-   alert(
-    "You picked " +
-     playerMove +
-     "! The computer picked " +
-     computerMove +
-     "! \nIt's a draw!\n" +
-     "\nTotal Score: \n**You Win: " +
-     playerWins +
-     "\n**Draw: " +
-     draw +
-     "\n**You Lost: " +
-     playerLosses +
-     "\nTotal Games: " +
-     gamesPlayed
-   );
+   alertScore("drawn");
   } else if (playerMove === "paper" && computerMove === "paper") {
    draw++;
-   alert(
-    "You picked " +
-     playerMove +
-     "! The computer picked " +
-     computerMove +
-     "! \nIt's a draw!\n" +
-     "\nTotal Score: \n**You Win: " +
-     playerWins +
-     "\n**Draw: " +
-     draw +
-     "\n**You Lost: " +
-     playerLosses +
-     "\nTotal Games: " +
-     gamesPlayed
-   );
-  } else alert("Please enter rock, paper or scissors!")
+   alertScore("drawn");
+  } else {
+   alert("Please enter rock, paper or scissors!");
+  }
 
   answer = confirm("Do you want to play again?");
   if (answer === false) {
    alert(
-    "***Thank you for playing***\nTotal Score: \n**You Win: " +
+    "***Thank you for playing***\nTotal Score: \n**You Won: " +
      playerWins +
      "\n**Draw: " +
      draw +
@@ -223,4 +101,24 @@ function computerPicks() {
  let computerMove = computerChoice;
 
  return computerMove;
+}
+
+function alertScore(frog) {
+ alert(
+  "You picked " +
+   playerMove +
+   "! The computer picked " +
+   computerMove +
+   "! \nYou have " +
+   frog +
+   " this round!\n" +
+   "\nTotal Score: \n**You Win: " +
+   playerWins +
+   "\n**Draw: " +
+   draw +
+   "\n**You Lost: " +
+   playerLosses +
+   "\nTotal Games: " +
+   gamesPlayed
+ );
 }

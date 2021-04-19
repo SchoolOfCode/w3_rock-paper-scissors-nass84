@@ -47,6 +47,8 @@ To create a game of Rock Paper Scissors against a computer
 - Day 1 Wrote Algorithm, tested it on Jon and made the game in Scratch to check it worked. 
 - Day 2 to Day 6 - Completed Homework up to Check Point
 - Day 7 Completed Task 1 - Game outcomes into If Statements to check logic
+- Day 8 Completed up to Task 6 - Score is announced after each round and option to quit playing
+- Day 9 Added Functions to make the code shorter. Started on Basic Html 
 
 #### Decisions
 
