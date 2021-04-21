@@ -1,27 +1,41 @@
-// ## Task 6: Scores
+// // ## Task 7: DOM
 
-// Keep track of how many games have been played, as well as the number of wins, losses, and draws.
-// This will be deemed as complete when this information is displayed after each round.
-//
-// Plan
-// - [x] How many games have been played
-// - Create a variable for games played x
-// - If score increases by 1 add 1 to games played
-// - [x] How many player wins
-// - Create a variable for player wins
-// - If score increases by 1 add 1 to player wins
-// - [x] How many player losses
-// - Create a variable for player losses
-// - If score increases by 1 add 1 to player lossess
-// - [x] How many draws
-// - Create a variable for draw
-// - Add code to alert draw
-// - If draw increases by 1 add 1 to draw
-// - [x] Display Information after each game
-// - If player score increases by 1 add You Won and game information
-// - If player losses increases by 1 add You Lost and game information
-// - If player draw increases by 1 add Draw and game information
-// - [x] Stop player entering wrong information
+// // Refactor your application so that all interactions are through HTML elements in [index.html](index.html) 
+// // rather than `confirm`, `alert` and `prompt`. Using the DOM allows our game to be event-driven, so you may want to 
+// // remove the while loop and instead compute the winner when an event is fired.
+
+// // This will be deemed as complete when `confirm`, `alert` and `prompt` are no longer used, user interaction is handled 
+// // with HTML elements, and all the information is displayed on the page.
+
+// -[x] Player Clicks on Image which is stored in event
+// -[x] When player clicks on choice, Computer Picks their Random Choice
+// Pick Rock First 
+// -[x] Compare Player Choice to Computer
+// -[] If player wins increase You won text by 1 
+// -[] If player lost increase You lost text by 1 
+// -[] If player draw increase draw text by 1 
+// -[] When hit play again increase games played by 0 
+// -[] When hit reset, change all numbers to 0 
+
+
+// If player clicks on rock image, set player move to rock
+// If player clicks on scissors image, set player move to scissors
+// If player clicks on paper image, set player move to paper
+
+
+
+function computerPicks() {
+ let choice = ["rock", "paper", "scissors"];
+
+ let random = Math.floor(Math.random() * choice.length);
+
+ computerChoice = (random, choice[random]);
+
+ let computerMove = computerChoice;
+
+ return computerMove;
+}
+
 
 let result = 0;
 let answer = true;
@@ -122,3 +136,50 @@ function alertScore(frog) {
    gamesPlayed
  );
 }
+
+//make images be events
+//rock
+
+let rockImage = document.querySelector("#rock");
+
+
+function playerRock(event) {
+
+  console.log("player picks rock");
+  playerMove = "rock";
+  computerMove = computerPicks()
+  if (computerMove === "rock") {
+    console.log("draw");
+} else if (computerMove === "scissors") {
+    console.log("player wins");
+} else if (computerMove === "paper" ) { 
+    console.log("computer wins") }
+}
+
+rockImage.addEventListener("click", playerRock);
+
+//paper
+
+let paperImage = document.querySelector("#paper");
+
+function playerPaper(event) {
+
+  console.log("player picks paper");
+  
+
+  
+}
+
+paperImage.addEventListener("click", playerPaper);
+
+//scissors
+
+let scissorsImage = document.querySelector("#scissors");
+
+function playerScissors(event) {
+
+  console.log("player picks scissors");
+  
+}
+
+scissorsImage.addEventListener("click", playerScissors);
