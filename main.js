@@ -39,7 +39,7 @@ function computerPicks() {
 
 let result = 0;
 let answer = true;
-let gamesPlayed = 0;
+let gamesPlayed = 1;
 let playerWins = 0;
 let playerLosses = 0;
 let draw = 0;
@@ -154,6 +154,8 @@ function playerRock(event) {
     console.log("player wins");
 } else if (computerMove === "paper" ) { 
     console.log("computer wins") }
+
+    gamesScoreIncrease()
 }
 
 rockImage.addEventListener("click", playerRock);
@@ -183,3 +185,11 @@ function playerScissors(event) {
 }
 
 scissorsImage.addEventListener("click", playerScissors);
+
+function gamesScoreIncrease(){
+  
+  let gamesScore = document.querySelector("#score-games")
+  result = gamesPlayed++;
+  gamesScore.innerText =  result;
+
+}
