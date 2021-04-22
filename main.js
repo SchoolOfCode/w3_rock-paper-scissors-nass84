@@ -1,20 +1,36 @@
-// // ## Task 7: DOM
+// ## Task 8: Validation
 
-// // Refactor your application so that all interactions are through HTML elements in [index.html](index.html) 
-// // rather than `confirm`, `alert` and `prompt`. Using the DOM allows our game to be event-driven, so you may want to 
-// // remove the while loop and instead compute the winner when an event is fired.
+// Create a username `input` field and use the username the player inputs in the game so that a player can see their name on the page when looking at where the scores are displayed.
 
-// // This will be deemed as complete when `confirm`, `alert` and `prompt` are no longer used, user interaction is handled 
-// // with HTML elements, and all the information is displayed on the page.
+// To make it more uniform, restrict the number of characters a username can be to 10 or fewer.
 
-// -[x] Player Clicks on Image which is stored in event
-// -[x] When player clicks on choice, Computer Picks their Random Choice
-// -[x] Compare Player Choice to Computer
-// -[x] If player wins increase You won text by 1 
-// -[x] If player lost increase You lost text by 1 
-// -[x] If player draw increase draw text by 1 
-// -[x] When hit reset, change all numbers to 0 
-// -[x] Clean up code
+// This will be deemed as complete when the users cannot enter a username longer than 10 characters.
+
+// 🌟 BONUS: Make it so that valid usernames should only start with letters, not numbers or symbols.  
+// 🌟 EXTRA BONUS: Make it so that the first letter of the username should be capitalised.
+//Plan
+// Create an input field
+// Make input replace player text 
+// Restrict username to be less than 10 characters
+// Make username only start with letters  
+// Username should be capitalised
+
+
+// Create an input field
+// Make input replace player text 
+
+let you = document.querySelectorAll(`.you`)
+
+function changeHeading() {
+  for (let i = 0; i < you.length; i++){ you[i].innerText = document.getElementById("changeText").value; }
+
+}
+
+// Restrict username to be less than 10 characters
+// Make username only start with letters  
+// Username should be capitalised
+// Make input replace player text 
+
 
 // DOM Variables
 

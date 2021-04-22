@@ -13,18 +13,29 @@
 
     <div class = "center"> 
 
-    <p id = "rules"> Click to Pick <br>
-      <strong>Rock, Paper or Scissors!</strong>
-      <br>
       <br>
        Rock beats Scissors <br>
        Scissors beats Paper <br>
        Paper beats Rock!    <br>
        </p>
+       
+      </div>
+
+      <h2 class = "center"> What should i call you? </h2>
+
+      <div class = "center" id = "name-input">
+      <input type="text" id="changeText" value=""><br>
+      <br>      
+      <button onclick="changeHeading()">Enter name</button>
 
       </div>
 
+      <p id = "rules"> <span class ="you">Click to </span> Pick <br>
+        <strong>Rock, Paper or Scissors!</strong>
+        <br>
+
        <div class = "center">
+        
        <img src="https://image.pngaaa.com/164/707164-middle.png" alt="rock" width="150" height="200" class = center id = "rock">
        <img src="https://www.clipartkey.com/mpngs/m/25-259242_collection-of-notebook-loose-leaf-paper-cartoon.png" alt="rock" width="150" height="200" class = center id = "paper">
        <img src="https://image.shutterstock.com/image-vector/cute-happy-cartoon-character-sharp-260nw-207931405.jpg" alt="rock" width="150" height="200" class = center id = "scissors">
@@ -32,9 +43,9 @@
 
 
       <div class="grid-container">
-        <div class="item1" id ="you-won">You Won</div>
+        <div class="item1" id ="you-won"><span class ="you">You</span> Won</div>
         <div class="item2" id ="you-drew"> Draw </div>
-        <div class="item3" id ="you-lost">You Lost </div>  
+        <div class="item3" id ="you-lost"><span class ="you">You</span> Lost </div>  
         <div class="item4" id ="games-played">Games Played</div>
         <div class="item5" id = "score-won"> 0 </div>
         <div class="item6" id = "score-draw"> 0 </div>
