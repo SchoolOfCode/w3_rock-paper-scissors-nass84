@@ -48,12 +48,14 @@ To create a game of Rock Paper Scissors against a computer
 - Day 2 to Day 6 - Completed Homework up to Check Point
 - Day 7 Completed Task 1 - Game outcomes into If Statements to check logic
 - Day 8 Completed up to Task 6 - Score is announced after each round and option to quit playing
-- Day 9 Added Functions to make the code shorter. Started on Basic Html 
+- Day 9 Added Functions to make the code shorter. Started on Basic Html and CSS 
+- Day 11 All scores now update on the page and the page refreshes on play again button. 
 
 #### Decisions
 
 * Should Score be best of 3 or higher
 * Should it count down from 3 and reveal 
+* Is refreshing the page best option for resetting score
 
 
 
