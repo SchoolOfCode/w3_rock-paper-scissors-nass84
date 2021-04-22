@@ -96,3 +96,4 @@ Some resources:
 - [Colour schemes](https://coolors.co/generate)
 - [Gradients](https://uigradients.com/)
 - [Box shadows](https://getcssscan.com/css-box-shadow-examples)
+- [Gif](https://www.hongkiat.com/blog/on-click-animated-gif/)

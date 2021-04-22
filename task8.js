@@ -59,9 +59,6 @@ inputtedWord.addEventListener(
 );
 
 
-
-
-
 // Make input replace player text
 
 // DOM Variables
@@ -200,4 +197,5 @@ function lossIncrease() {
 // When hit reset, change all numbers to 0
 
 let playAgain = document.querySelector("#play-again");
+
 
