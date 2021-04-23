@@ -1,0 +1,62 @@
+body {
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+ font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+ color: #163047;
+ font-size: 3rem;
+}
+
+h2 {
+ font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+ color: #163047;
+ font-size: 2rem;
+}
+
+#computer-pick {
+    align-items: center;
+    text-align: center;
+}
+
+.center {
+ display: flex;
+ justify-content: center;
+ flex: 0, 1, auto;
+ margin: 10px 40px 10px 40px;
+}
+
+.grid-container {
+ display: flex;
+ align-content: center;
+ max-width: 600px;
+ display: grid;
+ grid-template-columns: auto auto auto auto;
+ grid-gap: 10px;
+ background-color: #7b121a;
+ padding: 10px;
+ margin: 10px auto 10px auto;
+}
+
+.grid-container > div {
+ background-color: rgba(255, 255, 255, 0.8);
+ text-align: center;
+ padding: 20px 0;
+ font-size: 16px;
+}
+
+.button {
+    background-color:  #366D94; 
+    border: none;
+    border-radius: 20px 40px 20px 40px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 40px 10px 40px;
+
+  }
+
+  

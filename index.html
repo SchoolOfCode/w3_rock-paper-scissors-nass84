@@ -2,47 +2,52 @@
 <html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="wrestlingStyle.css" />
+    <title>ULTIMATE FIGHTING SCHOOL</title>
   </head>
   <article>   
   <body class = "text" >
-    <h1 class = "center"> Rock, Paper, Scissors </h1>
+    <h1 class = "center"> ULTIMATE FIGHTING SCHOOL </h1>
 
-    <h2 class = "center"> How to play </h2>
+    <div class = "center" id = "name-input">
+      <p class = "center"> <strong>What's your warrior name? &nbsp</strong>
+      <input type="text" id="changeText" value="" maxlength="10" >      
+      <button id = "text-button">Enter name</button>
+      </p>
+      </div>
 
-    <div class = "center"> 
+     <div class = "center"> 
 
-      <br>
-       Rock beats Scissors <br>
-       Scissors beats Paper <br>
-       Paper beats Rock!    <br>
+       Wrestler smashes Samurai <br>
+       Samurai cuts Sumo <br>
+       Sumo squishes Wrestler!    <br>
        </p>
        
       </div>
 
-      <h2 class = "center"> What should i call you? </h2>
-
-      <div class = "center" id = "name-input">
-      <input type="text" id="changeText" value="" maxlength="10"><br>
-      <br>      
-      <button id = "text-button">Enter name</button>
       
-      </div>
 
-      <p id = "rules"> <span class ="you">Click to </span> Pick <br>
-        <strong>Rock, Paper or Scissors!</strong>
-        <br>
+  
+      <h2 class = "center" id = "rules"> <span class ="you">Click to </span> &nbsp pick your champion </h2> 
+      
+        <strong class = "center">Wrestler, Sumo or Samurai!</strong>
+       
       </figure>
       <!-- add more images -->
       
-       <div class = "center">
+       <div class = "center"> 
+
+       <img src="C:\Users\bootcamp2\Documents\school-of-code\projects\w3_rock-paper-scissors-nass84\images\Wrestler 1.png"  alt="cartoon wrestler" width="130" height="180" class = center id = "rock">
+       <img src="C:\Users\bootcamp2\Documents\school-of-code\projects\w3_rock-paper-scissors-nass84\images\sumo.png" alt="cartoon sumo wrestler" width="180" height="180" class = center id = "paper">
+       <img src="C:\Users\bootcamp2\Documents\school-of-code\projects\w3_rock-paper-scissors-nass84\images\Samari 1.png" alt="cartoon samurai " width="130" height="180" class = center id = "scissors">
         
-       <img src="https://image.pngaaa.com/164/707164-middle.png" alt="rock" width="150" height="200" class = center id = "rock">
-       <img src="https://www.clipartkey.com/mpngs/m/25-259242_collection-of-notebook-loose-leaf-paper-cartoon.png" alt="rock" width="150" height="200" class = center id = "paper">
-       <img src="https://image.shutterstock.com/image-vector/cute-happy-cartoon-character-sharp-260nw-207931405.jpg" alt="rock" width="150" height="200" class = center id = "scissors">
+       <!-- <img src="images/picture.jpg"  alt="rock" width="150" height="200" class = center id = "rock">
+       <img src="https://www.clipartkey.com/mpngs/m/25-259242_collection-of-notebook-loose-leaf-paper-cartoon.png" alt="paper" width="150" height="200" class = center id = "paper">
+       <img src="https://image.shutterstock.com/image-vector/cute-happy-cartoon-character-sharp-260nw-207931405.jpg" alt="scissors" width="150" height="200" class = center id = "scissors"> -->
       </div>
 
+      <h3 class ="center" id = "computer-pick"> </h3>
+        
 
       <div class="grid-container">
         <div class="item1" id ="you-won"><span class ="you">You</span> Won</div>
