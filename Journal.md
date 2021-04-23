@@ -17,11 +17,7 @@ To create a game of Rock Paper Scissors against a computer
 6. If Player wins say >"You won" add 1 point to the players score
     - If Computer wins say >"I win" add 1 point to computers score
     - If Draw say >"Draw, play again" do not add point to score
-7. Check Score if Player score AND Computer score is 1 or under repeat from Step 1
-8. If Player Score === 2 say >"You have defeated me" 
-    - End Game
-9. if Computer Score === 2 say >"I am the winner"  
-    - End Game
+7. Option to play again
 
 ### Decide Winner
 
@@ -50,12 +46,5 @@ To create a game of Rock Paper Scissors against a computer
 - Day 8 Completed up to Task 6 - Score is announced after each round and option to quit playing
 - Day 9 Added Functions to make the code shorter. Started on Basic Html and CSS 
 - Day 11 All scores now update on the page and the page refreshes on play again button. 
-
-#### Decisions
-
-* Should Score be best of 3 or higher
-* Should it count down from 3 and reveal 
-* Is refreshing the page best option for resetting score
-
-
-
+- Day 12 Added events to change the text on page, Added Capatilse function
+- Day 13 Added new wrestling theme, animations and sounds
