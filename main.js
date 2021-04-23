@@ -11,8 +11,9 @@
 // -[x] Change background
 // -[x] Change colour of table
 // -[x] Change colour of button
-// -[] Add sound on name click
-// -[] Add animation when click on picture
+// -[x] Add sound on name click
+// -[x] Add animation on picture
+// -[x] Change wording to show result
 // -[] Add gif in between rounds - https://giphy.com/explore/fighting
 // -[] Change wording in the Win to famous quotes
 
@@ -27,6 +28,8 @@ let draw = 1;
 let playerMove;
 let computerMove;
 let displayComputerChoice = document.getElementById("computer-pick");
+let playerChoiceText = document.getElementById("playerChoiceText");
+
 
 // Player Clicks on Image which is stored in event
 // When player clicks on choice, Computer Picks their Random Choice
@@ -52,8 +55,11 @@ function computerPicks() {
 // Rock
 
 let rockImage = document.querySelector("#rock");
+let wrestlingGif = document.querySelector("wrestlingGif");
+
 
 function playerRock(event) {
+  playerChoiceText.innerText = "You picked Rock!";
   console.log("player picks rock");
   console.log("computer picks " + computerMove);
   playerMove = "Wrestler";
@@ -68,9 +74,10 @@ function playerRock(event) {
     console.log("computer wins");
     lossIncrease();
   }
-  
   gamesScoreIncrease();
   }
+
+
 
 rockImage.addEventListener("click", playerRock);
 
@@ -79,6 +86,7 @@ rockImage.addEventListener("click", playerRock);
 let paperImage = document.querySelector("#paper");
 
 function playerPaper(event) {
+  playerChoiceText.innerText = "You picked Sumo!";
   console.log("player picks paper");
   console.log("computer picks " + computerMove);
   
@@ -106,6 +114,7 @@ paperImage.addEventListener("click", playerPaper);
 let scissorsImage = document.querySelector("#scissors");
 
 function playerScissors(event) {
+  playerChoiceText.innerText = "You picked Samurai!";
   console.log("player picks scissors");
   console.log("computer picks " + computerMove);
   playerMove = "Samurai";
@@ -139,9 +148,7 @@ function playerScoreIncrease() {
   result = playerWins++;
   playerScore.innerText = result;
   displayComputerChoice.innerText =
-    "You picked " +
-    playerMove +
-    "! The computer picked " +
+    "The computer picked " +
     computerMove +
     "!" +
     "\nVICTORY IS YOURS!!!!!";
@@ -152,9 +159,7 @@ function drawIncrease() {
   result = draw++;
   drawScore.innerText = result;
   displayComputerChoice.innerText =
-    "You picked " +
-    playerMove +
-    "! The computer picked " +
+    "The computer picked " +
     computerMove +
     "!" +
     "\nDRAW!!!!!";
@@ -165,9 +170,7 @@ function lossIncrease() {
   result = playerLosses++;
   lostScore.innerText = result;
   displayComputerChoice.innerText =
-    "You picked " +
-    playerMove +
-    "! The computer picked " +
+    "The computer picked " +
     computerMove +
     "!" +
     "\nYOU HAVE BEEN DEFEATED!";

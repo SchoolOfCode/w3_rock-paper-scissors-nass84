@@ -17,6 +17,7 @@ h2 {
 #computer-pick {
   align-items: center;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .center {
@@ -291,4 +292,8 @@ h2 {
 .pulsate-slow {
   -webkit-animation: pulsate-fwd 0.5s ease-in-out 10 both;
         animation: pulsate-fwd 0.5s ease-in-out 10 both;
+}
+
+#playerChoiceText{
+  font-size: 1.5rem;
 }
