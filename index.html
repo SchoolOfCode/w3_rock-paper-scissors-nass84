@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="wrestlingStyle.css" />
+    <link rel="stylesheet" href="animista.css" />
+    
     <title>ULTIMATE FIGHTING SCHOOL</title>
   </head>
   <article>   
   <body class = "text" >
-    <h1 class = "center"> ULTIMATE FIGHTING SCHOOL </h1>
+    <h1 class = "center" id ="mainTitle"> ULTIMATE FIGHTING SCHOOL </h1>
 
     <div class = "center" id = "name-input">
       <p class = "center"> <strong>What's your warrior name? &nbsp</strong>
@@ -37,23 +39,20 @@
       
        <div class = "center"> 
 
-       <img src="C:\Users\bootcamp2\Documents\school-of-code\projects\w3_rock-paper-scissors-nass84\images\Wrestler 1.png"  alt="cartoon wrestler" width="130" height="180" class = center id = "rock">
-       <img src="C:\Users\bootcamp2\Documents\school-of-code\projects\w3_rock-paper-scissors-nass84\images\sumo.png" alt="cartoon sumo wrestler" width="180" height="180" class = center id = "paper">
-       <img src="C:\Users\bootcamp2\Documents\school-of-code\projects\w3_rock-paper-scissors-nass84\images\Samari 1.png" alt="cartoon samurai " width="130" height="180" class = center id = "scissors">
+       <img src="C:\Users\bootcamp2\Documents\school-of-code\projects\w3_rock-paper-scissors-nass84\images\Wrestler 1.png"  alt="cartoon wrestler" width="130" height="180" class="center" id = "rock">
+       <img src="C:\Users\bootcamp2\Documents\school-of-code\projects\w3_rock-paper-scissors-nass84\images\sumo.png" alt="cartoon sumo wrestler" width="180" height="180" class = "center" id = "paper">
+       <img src="C:\Users\bootcamp2\Documents\school-of-code\projects\w3_rock-paper-scissors-nass84\images\Samari 1.png" alt="cartoon samurai " width="130" height="180" class = "center" id = "scissors">
         
-       <!-- <img src="images/picture.jpg"  alt="rock" width="150" height="200" class = center id = "rock">
-       <img src="https://www.clipartkey.com/mpngs/m/25-259242_collection-of-notebook-loose-leaf-paper-cartoon.png" alt="paper" width="150" height="200" class = center id = "paper">
-       <img src="https://image.shutterstock.com/image-vector/cute-happy-cartoon-character-sharp-260nw-207931405.jpg" alt="scissors" width="150" height="200" class = center id = "scissors"> -->
-      </div>
+       </div>
 
       <h3 class ="center" id = "computer-pick"> </h3>
         
 
-      <div class="grid-container">
-        <div class="item1" id ="you-won"><span class ="you">You</span> Won</div>
-        <div class="item2" id ="you-drew"> Draw </div>
-        <div class="item3" id ="you-lost"><span class ="you">You</span> Lost </div>  
-        <div class="item4" id ="games-played">Games Played</div>
+      <div class="grid-container" id= "scoreBoard">
+        <div class="item1 bold" id ="you-won"><span class ="you">You</span> Won</div>
+        <div class="item2 bold" id ="you-drew"> Draw </div>
+        <div class="item3 bold" id ="you-lost"><span class ="you">You</span> Lost </div>  
+        <div class="item4 bold" id ="games-played">Games Played</div>
         <div class="item5" id = "score-won"> 0 </div>
         <div class="item6" id = "score-draw"> 0 </div>
         <div class="item7" id = "score-lost"> 0 </div>

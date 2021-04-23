@@ -2,21 +2,19 @@
 
 // Use CSS to add some style, flair, and animation to the playing experience on the page. Be creative! ✨ Keep in mind your user and make their experience as easy and enjoyable as possible.
 
-
 // -[] Add media queries for larger screens
 // -[x] Increase input size in text box
-// -[x] Add who won 
+// -[x] Add who won
 // -[x] Replace pictures with wrestlers
 // -[x] Change wording on HTML
 // -[x] Change wording on JS
-// -[x] Change background 
+// -[x] Change background
 // -[x] Change colour of table
 // -[x] Change colour of button
-// -[] Add sound on name click 
-// -[] Add gif in between rounds
-// -[] Change wording in the Win to famous quotes 
-
-
+// -[] Add sound on name click
+// -[] Add animation when click on picture
+// -[] Add gif in between rounds - https://giphy.com/explore/fighting
+// -[] Change wording in the Win to famous quotes
 
 // DOM Variables
 
@@ -34,15 +32,15 @@ let displayComputerChoice = document.getElementById("computer-pick");
 // When player clicks on choice, Computer Picks their Random Choice
 
 function computerPicks() {
- let choice = ["Wrestler", "Sumo", "Samurai"];
+  let choice = ["Wrestler", "Sumo", "Samurai"];
 
- let random = Math.floor(Math.random() * choice.length);
+  let random = Math.floor(Math.random() * choice.length);
 
- computerChoice = (random, choice[random]);
+  computerChoice = (random, choice[random]);
 
- let computerMove = computerChoice;
+  let computerMove = computerChoice;
 
- return computerMove;
+  return computerMove;
 }
 
 // Compare Player Choice to Computer
@@ -56,24 +54,23 @@ function computerPicks() {
 let rockImage = document.querySelector("#rock");
 
 function playerRock(event) {
- console.log("player picks rock");
- console.log("computer picks " + computerMove);
- playerMove = "Wrestler";
- computerMove = computerPicks();
- if (computerMove === "Wrestler") {
-  console.log("draw");
-  drawIncrease();
- } else if (computerMove === "Samurai") {
-  console.log("player wins");
-  playerScoreIncrease();
- } else if (computerMove === "Sumo") {
-  console.log("computer wins");
-  lossIncrease();
- }
-
- gamesScoreIncrease();
- 
-}
+  console.log("player picks rock");
+  console.log("computer picks " + computerMove);
+  playerMove = "Wrestler";
+  computerMove = computerPicks();
+  if (computerMove === "Wrestler") {
+    console.log("draw");
+    drawIncrease();
+  } else if (computerMove === "Samurai") {
+    console.log("player wins");
+    playerScoreIncrease();
+  } else if (computerMove === "Sumo") {
+    console.log("computer wins");
+    lossIncrease();
+  }
+  
+  gamesScoreIncrease();
+  }
 
 rockImage.addEventListener("click", playerRock);
 
@@ -82,24 +79,25 @@ rockImage.addEventListener("click", playerRock);
 let paperImage = document.querySelector("#paper");
 
 function playerPaper(event) {
- console.log("player picks paper");
- console.log("computer picks " + computerMove);
- playerMove = "Sumo";
- computerMove = computerPicks();
- if (computerMove === "Sumo") {
-  console.log("draw");
-  drawIncrease();
- } else if (computerMove === "Wrestler") {
-  console.log("player wins");
-  playerScoreIncrease();
- } else if (computerMove === "Samurai") {
-  console.log("computer wins");
-  lossIncrease();
- }
-
- gamesScoreIncrease();
- 
+  console.log("player picks paper");
+  console.log("computer picks " + computerMove);
+  
+  playerMove = "Sumo";
+  computerMove = computerPicks();
+  if (computerMove === "Sumo") {
+    console.log("draw");
+    drawIncrease();
+  } else if (computerMove === "Wrestler") {
+    console.log("player wins");
+    playerScoreIncrease();
+  } else if (computerMove === "Samurai") {
+    console.log("computer wins");
+    lossIncrease();
+  }
+  
+  gamesScoreIncrease();
 }
+
 
 paperImage.addEventListener("click", playerPaper);
 
@@ -108,23 +106,22 @@ paperImage.addEventListener("click", playerPaper);
 let scissorsImage = document.querySelector("#scissors");
 
 function playerScissors(event) {
- console.log("player picks scissors");
- console.log("computer picks " + computerMove);
- playerMove = "Samurai";
- computerMove = computerPicks();
- if (computerMove === "Samurai") {
-  console.log("draw");
-  drawIncrease();
- } else if (computerMove === "Sumo") {
-  console.log("player wins");
-  playerScoreIncrease();
- } else if (computerMove === "Wrestler") {
-  console.log("computer wins");
-  lossIncrease();
- }
+  console.log("player picks scissors");
+  console.log("computer picks " + computerMove);
+  playerMove = "Samurai";
+  computerMove = computerPicks();
+  if (computerMove === "Samurai") {
+    console.log("draw");
+    drawIncrease();
+  } else if (computerMove === "Sumo") {
+    console.log("player wins");
+    playerScoreIncrease();
+  } else if (computerMove === "Wrestler") {
+    console.log("computer wins");
+    lossIncrease();
+  }
 
- gamesScoreIncrease();
-
+  gamesScoreIncrease();
 }
 
 scissorsImage.addEventListener("click", playerScissors);
@@ -132,30 +129,48 @@ scissorsImage.addEventListener("click", playerScissors);
 // Scores
 
 function gamesScoreIncrease() {
- let gamesScore = document.querySelector("#score-games");
- result = gamesPlayed++;
- gamesScore.innerText = result;
+  let gamesScore = document.querySelector("#score-games");
+  result = gamesPlayed++;
+  gamesScore.innerText = result;
 }
 
 function playerScoreIncrease() {
- let playerScore = document.querySelector("#score-won");
- result = playerWins++;
- playerScore.innerText = result;
- displayComputerChoice.innerText = "You picked " + playerMove + "! The computer picked " + computerMove + "!" + "\nVICTORY IS YOURS!!!!!";
+  let playerScore = document.querySelector("#score-won");
+  result = playerWins++;
+  playerScore.innerText = result;
+  displayComputerChoice.innerText =
+    "You picked " +
+    playerMove +
+    "! The computer picked " +
+    computerMove +
+    "!" +
+    "\nVICTORY IS YOURS!!!!!";
 }
 
 function drawIncrease() {
- let drawScore = document.querySelector("#score-draw");
- result = draw++;
- drawScore.innerText = result;
- displayComputerChoice.innerText = "You picked " + playerMove + "! The computer picked " + computerMove + "!" + "\nDRAW!!!!!";
+  let drawScore = document.querySelector("#score-draw");
+  result = draw++;
+  drawScore.innerText = result;
+  displayComputerChoice.innerText =
+    "You picked " +
+    playerMove +
+    "! The computer picked " +
+    computerMove +
+    "!" +
+    "\nDRAW!!!!!";
 }
 
 function lossIncrease() {
- let lostScore = document.querySelector("#score-lost");
- result = playerLosses++;
- lostScore.innerText = result;
- displayComputerChoice.innerText = "You picked " + playerMove + "! The computer picked " + computerMove + "!" + "\nYOU HAVE BEEN DEFEATED!";
+  let lostScore = document.querySelector("#score-lost");
+  result = playerLosses++;
+  lostScore.innerText = result;
+  displayComputerChoice.innerText =
+    "You picked " +
+    playerMove +
+    "! The computer picked " +
+    computerMove +
+    "!" +
+    "\nYOU HAVE BEEN DEFEATED!";
 }
 
 // When hit reset, change all numbers to 0
@@ -170,10 +185,24 @@ const textButton = document.querySelector(`#text-button`);
 let inputtedWord = document.getElementById("changeText");
 
 function changeHeading() {
- for (let i = 0; i < you.length; i++) {
-  you[i].innerText = document.getElementById("changeText").value;
- }
+  for (let i = 0; i < you.length; i++) {
+    you[i].innerText = document.getElementById("changeText").value;
+  }
+  const audio = new Audio("shortRumble.mp3");
+  audio.play();
+  let wrestlerAnimate = document.getElementById("rock");
+  wrestlerAnimate.classList.add("flip-vertical-right");
+  let sumoAnimate = document.getElementById("paper");
+  sumoAnimate.classList.add("scale-in-center");
+  let samuraiAnimate = document.getElementById("scissors");
+  samuraiAnimate.classList.add("roll-in-blurred-right");
+  setTimeout(300);
+  let flashingHeadline = document.getElementById("mainTitle");
+  flashingHeadline.classList.add("pulsate-fwd");
+  let flashingButton = document.getElementById("play-again");
+  flashingButton.classList.add("pulsate-slow");
 }
+
 
 textButton.addEventListener("click", changeHeading);
 
@@ -190,23 +219,21 @@ textButton.addEventListener("click", changeHeading);
 // 5. Return the word
 
 function capitalise(word) {
- let lowerCaseWord = word.toLowerCase();
- let upperCaseLetter = lowerCaseWord[0];
- lowerCaseWord = lowerCaseWord.substring(1);
- upperCaseLetter = upperCaseLetter.toUpperCase();
- let capitaliseWord = upperCaseLetter + lowerCaseWord;
+  let lowerCaseWord = word.toLowerCase();
+  let upperCaseLetter = lowerCaseWord[0];
+  lowerCaseWord = lowerCaseWord.substring(1);
+  upperCaseLetter = upperCaseLetter.toUpperCase();
+  let capitaliseWord = upperCaseLetter + lowerCaseWord;
 
- return capitaliseWord;
+  return capitaliseWord;
 }
 
 inputtedWord.addEventListener(
- "blur",
- (e) => (e.target.value = capitalise(e.target.value))
+  "blur",
+  (e) => (e.target.value = capitalise(e.target.value))
 );
 
-// -[] Add computer choice visually 
-// . make a place to display the text 
+// -[] Add computer choice visually
+// . make a place to display the text
 // . make a function that displays computer choice
 // . add function to rock, paper, scissors
-
-
