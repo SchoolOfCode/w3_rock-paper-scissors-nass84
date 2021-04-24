@@ -322,11 +322,11 @@ h2 {
   }
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 1rem;
     text-align: center;
   }
     input {
-    font-size: 30px;
+    font-size: 12px;
     max-width: 150px;
     margin-left: 5px;
     margin-right: 5px;
@@ -335,8 +335,7 @@ h2 {
 
   .imageContainer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column; */
   }
 
   .images {
@@ -345,7 +344,7 @@ h2 {
 
  
   #rules{
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 100;
     padding: 10px 5px 10px 5px;
     max-width: 250px;
@@ -364,12 +363,12 @@ h2 {
   }
 
   #computer-pick { 
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 2rem;
   }
 
   .images {
-    width: 190px;
+    width: 50px;
     justify-content: center;
   }
 }
