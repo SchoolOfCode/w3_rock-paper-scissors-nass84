@@ -40,7 +40,8 @@ function computerPicks() {
 function playerRock(event) {
   const audioSumo = new Audio("growl.wav");
   audioSumo.play();
-  playerChoiceText.innerText = "You picked Wrestler!";
+  playerChoiceText.classList.add("largerText");
+  playerChoiceText.innerText = "You picked Rocky the Wrestler!";
   console.log("player picks rock");
   console.log("computer picks " + computerMove);
   playerMove = "Wrestler";
@@ -130,7 +131,7 @@ function playerScoreIncrease() {
     audioWin.play();
   }, 500);
   displayComputerChoice.innerText =
-    "The computer picked " + computerMove + "!" + "\nVICTORY IS YOURS!!!!!";
+    "The Master picked " + computerMove + "!" + "\nVICTORY IS YOURS!!!!!";
 }
 
 function drawIncrease() {
@@ -138,7 +139,7 @@ function drawIncrease() {
   result = draw++;
   drawScore.innerText = result;
   displayComputerChoice.innerText =
-    "The computer picked " + computerMove + "!" + "\nDRAW!!!!!";
+    "The Master picked " + computerMove + "!" + "\nDRAW!!!!!";
 }
 
 function lossIncrease() {
@@ -150,7 +151,7 @@ function lossIncrease() {
     audioLost.play();
   }, 500);
   displayComputerChoice.innerText =
-    "The computer picked " + computerMove + "!" + "\nYOU HAVE BEEN DEFEATED!";
+    "The Master picked " + computerMove + "!" + "\nYOU HAVE BEEN DEFEATED!";
 }
 
 // Make input replace player text
