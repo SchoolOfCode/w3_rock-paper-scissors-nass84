@@ -8,6 +8,14 @@ h1 {
   font-size: 3rem;
 }
 
+input {
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  max-width: 150px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 h2 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: #163047;
@@ -302,3 +310,66 @@ h2 {
 }
 
 
+/* For phone design */
+
+
+
+
+@media only screen and (max-width: 500px) {
+  body {
+    margin: 20px 10px 20px 10px;
+    background-color: #FOFDFD;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+    input {
+    font-size: 30px;
+    max-width: 150px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+  }
+
+  .imageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .images {
+  flex: 0 1 auto;  
+    }
+
+ 
+  #rules{
+    font-size: 1.3rem;
+    font-weight: 100;
+    padding: 10px 5px 10px 5px;
+    max-width: 250px;
+    align-self: center;
+    text-align: center;
+    margin-left: 5px ;
+    margin-right: 5px;
+  }
+
+  #playerChoiceText { 
+    border:#163047 5px solid;
+    background-color: aliceblue;
+    font-size: 1rem;
+    line-height: 2rem;
+    max-width: 200px;
+  }
+
+  #computer-pick { 
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+  .images {
+    width: 190px;
+    justify-content: center;
+  }
+}

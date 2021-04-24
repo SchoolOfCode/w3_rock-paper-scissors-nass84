@@ -48,3 +48,4 @@ To create a game of Rock Paper Scissors against a computer
 - Day 11 All scores now update on the page and the page refreshes on play again button. 
 - Day 12 Added events to change the text on page, Added Capatilse function
 - Day 13 Added new wrestling theme, animations and sounds
+- Day 14 Added new names for the players, asked for user feedback. 

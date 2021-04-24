@@ -42,18 +42,13 @@ function playerRock(event) {
   audioSumo.play();
   playerChoiceText.classList.add("largerText");
   playerChoiceText.innerText = "You picked Rocky the Wrestler!";
-  console.log("player picks rock");
-  console.log("computer picks " + computerMove);
   playerMove = "Wrestler";
   computerMove = computerPicks();
   if (computerMove === "Wrestler") {
-    console.log("draw");
     drawIncrease();
   } else if (computerMove === "Samurai") {
-    console.log("player wins");
     playerScoreIncrease();
   } else if (computerMove === "Sumo") {
-    console.log("computer wins");
     lossIncrease();
   }
   gamesScoreIncrease();
@@ -67,19 +62,14 @@ function playerPaper(event) {
   const audioSumo = new Audio("sumo.wav");
   audioSumo.play();
   playerChoiceText.innerText = "You picked Sumo!";
-  console.log("player picks paper");
-  console.log("computer picks " + computerMove);
 
   playerMove = "Sumo";
   computerMove = computerPicks();
   if (computerMove === "Sumo") {
-    console.log("draw");
     drawIncrease();
   } else if (computerMove === "Wrestler") {
-    console.log("player wins");
     playerScoreIncrease();
   } else if (computerMove === "Samurai") {
-    console.log("computer wins");
     lossIncrease();
   }
 
@@ -94,18 +84,13 @@ function playerScissors(event) {
   const audioSamurai = new Audio("sword.mp3");
   audioSamurai.play();
   playerChoiceText.innerText = "You picked Samurai!";
-  console.log("player picks scissors");
-  console.log("computer picks " + computerMove);
   playerMove = "Samurai";
   computerMove = computerPicks();
   if (computerMove === "Samurai") {
-    console.log("draw");
     drawIncrease();
   } else if (computerMove === "Sumo") {
-    console.log("player wins");
     playerScoreIncrease();
   } else if (computerMove === "Wrestler") {
-    console.log("computer wins");
     lossIncrease();
   }
 
