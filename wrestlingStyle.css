@@ -50,7 +50,7 @@ h2 {
 
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
-  align: center;
+  align-self: center;
   padding: 10px 5px 10px 5px;
   font-size: 16px;
 }
@@ -313,7 +313,6 @@ h2 {
 @media only screen and (max-width: 500px) {
   body {
     margin: 20px 10px 20px 10px;
-    background-color: #FOFDFD;
     font-size: 10px;
   }
 
@@ -349,7 +348,7 @@ h2 {
     font-size: 1rem;
     font-weight: 100;
     padding: 5px 5px 5px 5px;
-    max-width: 250px;
+    max-width: 300px;
     align-self: center;
     text-align: center;
     margin-left: 5px;
@@ -358,7 +357,6 @@ h2 {
 
   #rulesText {
     font-size: 10px;
-    border: blue solid 2px;
     padding: 10px;
   }
 
@@ -366,10 +364,7 @@ h2 {
     display: flex;
     justify-self: center;
     font-size: 12px;
-    max-width: 200px;
-    border: solid purple 5px;
-    margin-left: 50px;
-    margin-right: 50px;
+    font-weight: bold;
   }
 
   #computer-pick {
@@ -388,7 +383,7 @@ h2 {
 
   .grid-container > div {
     background-color: rgba(255, 255, 255, 0.8);
-    align: center;
+    align-self: center;
     padding: 10px 5px 10px 5px;
     font-size: 10px;
     text-align: center;
@@ -413,7 +408,6 @@ h2 {
   }
 
   .grid-container {
-    
     padding: 5px, 5px, 5px, 5px;
     margin: 10px 10px 10px 10px;
   }
